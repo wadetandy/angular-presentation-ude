@@ -1,4 +1,4 @@
-<h2>Basic extensible directives</h2>
+<h2>A Basic extensible directive</h2>
 <pre><code data-trim>
 angular.module('ui.bootstrap.pagination', [])
 .constant('paginationConfig', {
@@ -243,3 +243,9 @@ angular.module('ui.bootstrap.pagination', [])
   };
 }]);
 </code></pre>
+
+<ul>
+    <li class='fragment'>Project-wide extensibility</li>
+    <li class='fragment'>Need to add configuration option for each instance-specific customization</li>
+    <li class='fragment'>Hard to test - Must test DOM changes</li>
+</ul>

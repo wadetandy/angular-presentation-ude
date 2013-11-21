@@ -36,12 +36,6 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Object Oriented Directives in Angular.js</h1>
-					<p><small>Wade Tandy</small></p>
-					<p><small>Chaz Chandler</small></p>
-				</section>
-
 				<section data-markdown>
 					<script type="text/template">
                         ## Object Oriented Directives in Angular.js
@@ -59,12 +53,35 @@
 				</section>
 
 				<section>
+                <h2>Where We're Coming From</h2>
+                <ul>
+                    <li class='fragment'>Ruby on Rails</li>
+                    <li class='fragment'>Angular.js</li>
+                    <li class='fragment'>Many different single-page Angular apps</li>
+                    <li class='fragment'>Each app deals with different data and has slightly different needs</li>
+                    <li class='fragment'>Still want to share common components</li>
+                </ul>
+				</section>
+
+				<section>
+                <h2>What do we mean by components?</h2>
+                <div>
+                    <img class='fragment' src='facets-count-sorted.png'/>
+                    <img class='fragment' src='facets-alpha-sorted.png'/>
+                </div>
+                <div>
+                    <img class='fragment' src='standard-pagination.png'/>
+                    <img class='fragment' src='terminal-pagination.png'/>
+                </div>
+				</section>
+
+				<section>
                 <h2>Angular.js directives are awesome!</h2>
 
                 <ol>
                     <li class="fragment">Extend HTML vocabulary</li>
                     <li class="fragment">Declarative style makes page logic easy to follow</li>
-                    <li class="fragment">"Write one, reuse everywhere"</li>
+                    <li class="fragment">"Write once, reuse everywhere"</li>
                 </ol>
 				</section>
 
@@ -79,22 +96,28 @@
                 </ol>
 				</section>
 
-				<section data-remote="ui-pagination.html"> </section>
+				<section data-remote="ui-pagination.html"></section>
 
-				<section data-markdown>
-					<script type="text/template">
-					</script>
+				<section>
+                <h2>A (Hopefully) Better Way</h2>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-					</script>
+				<section>
+                <h2>Object-Oriented Directives</h2>
+                <ol>
+                    <li class="fragment">Thin directive delegates to object factories</li>
+                    <li class="fragment">Factories can be subclassed using Angular Injector</li>
+                    <li class="fragment">Most tests written for Plain Old Javascript Objects</li>
+                    <li class="fragment">Offer hooks instead of configuration options</li>
+                </ol>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-					</script>
+				<section data-remote='thin-directive.html'>
 				</section>
+
+				<section data-remote='override-factories.html'>
+				</section>
+
 
 				<section data-markdown>
 					<script type="text/template">
@@ -143,6 +166,9 @@ function linkify( selector ) {
 				progress: true,
 				history: true,
 				center: true,
+
+                width: 1000,
+                height: 900,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none

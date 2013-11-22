@@ -101,9 +101,17 @@
         <section>
                 <h2>Case Study: Pagination</h2>
 
-                <div ng-controller="myCtrl">
+                <ul>
+                  <li class="fragment">Everybody needs pagination at some point</li>
+                  <li class="fragment">Even a simple paginator has nontrivial logic</li>
+                  <li class="fragment">Different types of data may require different pagination techniques</li>
+                </ul>
 
-                  <div class='span4' style="width:1100px"
+
+                <div class='fragment' ng-controller="myCtrl">
+
+                  <hr/>
+                  <div style="width:1100px"
                             bb-paginate="search.meta.pagination"
                             paginator="StandardPaginator"
                             on-page-select="selectPage(pageNumber)"

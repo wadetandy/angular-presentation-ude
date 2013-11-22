@@ -51,7 +51,6 @@
 .pagination ul > .disabled > a:hover,
 .pagination ul > .disabled > a:focus {
   color: #999999;
-  background-color: transparent;
   cursor: default;
 }
 

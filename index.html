@@ -153,6 +153,44 @@
 				<section data-remote='offer-hooks.html'>
 				</section>
 
+				<section>
+                <h2>Demo</h2>
+
+                <div ng-controller="myCtrl">
+
+                  <div class='fragment'>
+                      <h4>Standard Pagination</h4>
+                      <div class='span4'
+                        bb-paginate="search.meta.pagination"
+                        paginator="StandardPaginator"
+                        on-page-select="selectPage(pageNumber)"
+                        paginate-beacon ></div>
+                  </div>
+
+                  <br/>
+
+                  <div class='fragment'>
+                      <h4>Standard Pagination with 5 pages</h4>
+                      <div class='span4'
+                        bb-paginate="fivepage"
+                        on-page-select="selectFivePage(pageNumber)"></div>
+                  </div>
+
+                  <br/>
+
+                  <div class='fragment'>
+                      <h4>Indefinite Pagination</h4>
+                      <div class='span4'
+                        bb-paginate="terminal"
+                        paginator="TerminalPaginator"
+                        on-page-select="selectTerminalPage(pageNumber)">
+                      </div>
+                    </div>
+
+
+                </div>
+				</section>
+
                 <section>
                 <h2>We're hiring</h2>
                 <h2><a href='http://jobs.bloomberg.com'>jobs.bloomberg.com</a></h2>
